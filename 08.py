@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+#title: working hard?
+#hint1: Where is the missing link?
+#hint2: un: 'BZh91AY&SYA\xaf\x82\r\x00\x00\x01\x01\x80\x02\xc0\x02\x00 \x00!\x9ah3M\x07<]\xc9\x14\xe1BA\x06\xbe\x084'
+#hint3: pw: 'BZh91AY&SY\x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\xe1BBP\x91\xf08'
+#fact1: the bee links to a page in a protected directory
+#fact2: BZh91AY seems to be a bzip2 header (says Google)
+import bz2
+un= 'BZh91AY&SYA\xaf\x82\r\x00\x00\x01\x01\x80\x02\xc0\x02\x00 \x00!\x9ah3M\x07<]\xc9\x14\xe1BA\x06\xbe\x084'
+pw= 'BZh91AY&SY\x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\xe1BBP\x91\xf08'
+print "user:",bz2.decompress(un) #huge
+print "pass:",bz2.decompress(pw) #file
